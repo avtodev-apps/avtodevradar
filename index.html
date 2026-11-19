@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Такси Радар — Умный помощник водителя такси</title>
+    <title>Приложения для водителей — Официальный сайт разработчика</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -19,40 +19,76 @@
             box-sizing: border-box;
             text-align: center;
         }
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+            max-width: 900px;
+        }
         .card {
             background-color: #1E1E1E;
             padding: 30px;
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-            max-width: 500px;
+            max-width: 400px;
+            flex: 1 1 350px;
             border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        h1 { color: #FFCC00; margin-bottom: 10px; font-size: 26px; }
-        p { color: #BBB; line-height: 1.6; font-size: 15px; }
+        h1 { margin-bottom: 10px; font-size: 24px; }
+        .taxi-title { color: #FFCC00; }
+        .radar-title { color: #00E5FF; }
+        p { color: #BBB; line-height: 1.6; font-size: 14px; margin-bottom: 20px; }
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #FF6D00, #FF9100);
             color: white;
             text-decoration: none;
             padding: 12px 24px;
             border-radius: 8px;
             font-weight: bold;
-            margin-top: 20px;
+            margin-top: auto;
+        }
+        .btn-taxi {
+            background: linear-gradient(135deg, #FF6D00, #FF9100);
             box-shadow: 0 4px 12px rgba(255, 109, 0, 0.3);
         }
-        .footer { margin-top: 25px; font-size: 13px; color: #777; }
-        .footer a { color: #FFCC00; text-decoration: none; }
+        .btn-radar {
+            background: linear-gradient(135deg, #00B0FF, #00E5FF);
+            color: #000;
+            box-shadow: 0 4px 12px rgba(0, 229, 255, 0.3);
+        }
+        .footer { margin-top: 35px; font-size: 13px; color: #777; }
+        .footer a { color: #FFCC00; text-decoration: none; margin: 0 8px; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>🚖 Такси Радар</h1>
-        <p>Официальное приложение для водителей такси в России. Анализ коэффициентов высокого спроса (Surge), расчет чистой прибыли с учетом топлива и комиссии.</p>
-        <a class="btn" href="https://www.rustore.ru/catalog/app/com.taxiradar.app" target="_blank">Скачать в RuStore</a>
-        <div class="footer">
-            Разработчик: Травников Александр<br>
-            <a href="/app-ads.txt">app-ads.txt</a> | <a href="mailto:Travolta3221@yandex.ru">Поддержка</a>
+    <div class="container">
+        <!-- Такси Радар -->
+        <div class="card">
+            <div>
+                <h1 class="taxi-title">🚖 Такси Радар</h1>
+                <p>Официальное приложение для водителей такси в России. Анализ коэффициентов высокого спроса (Surge), расчет чистой прибыли с учетом топлива и комиссии агрегатора.</p>
+            </div>
+            <a class="btn btn-taxi" href="https://www.rustore.ru/catalog/app/com.taxiradar.app" target="_blank">Скачать в RuStore</a>
         </div>
+
+        <!-- СпецРадар HUD -->
+        <div class="card">
+            <div>
+                <h1 class="radar-title">📡 СпецРадар HUD</h1>
+                <p>Автомобильный GPS-спидометр и ассистент водителя. Автономная база 14 375 камер РФ, конический фильтр направления, проекция на лобовое стекло (HUD) и виджет поверх навигатора.</p>
+            </div>
+            <a class="btn btn-radar" href="https://www.rustore.ru/catalog/app/com.smartantiradar.app" target="_blank">Страница в RuStore</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Разработчик: Травников Александр<br><br>
+        <a href="/app-ads.txt">app-ads.txt</a> | <a href="mailto:Travolta3221@yandex.ru">Поддержка</a>
     </div>
 </body>
 </html>
